@@ -38,17 +38,20 @@ function App() {
 
   return (
     <div className="app">
-      <form className="flex gap-4" onSubmit={handleTreeArrayChange}>
+      <form
+        className="flex gap-4 flex-col items-center sm:flex-row justify-between"
+        onSubmit={handleTreeArrayChange}
+      >
         <input
           placeholder="Enter the tree"
-          className="w-[400px] border-2 pl-2 rounded border-black"
+          className="w-[250px] h-[40px] sm:w-[400px] border-2 pl-2 rounded border-black "
           type="text"
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
         <button
           type="submit"
-          className="rounded-md border-2 bg-blue-500 text-white w-[100px] h-[40px]"
+          className="rounded-md border-2 bg-blue-500 text-white w-[80px] sm:w-[100px] h-[40px]"
         >
           Submit
         </button>
